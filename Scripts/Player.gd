@@ -14,6 +14,7 @@ func _ready() -> void:
 	
 	#Inventory.resize(Inventory_size)
 	#Inventory.fill(null)
+	Inventory = []
 	print(Inventory)
 	for invSlot in Inventory:
 		var s = slot.instantiate()

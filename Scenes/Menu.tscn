@@ -141,6 +141,109 @@ texture = ExtResource("5_wfhf6")
 [node name="Settings" type="CanvasLayer" parent="." unique_id=532027775]
 visible = false
 
+[node name="BG" type="ColorRect" parent="Settings" unique_id=638766803]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Settings/BG" unique_id=1204230873]
+modulate = Color(0.806047, 0.642629, 0.3742, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3jcrr")
+stretch_mode = 1
+
+[node name="Panel" type="Panel" parent="Settings/BG" unique_id=316828642]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = -139.0
+offset_right = 258.0
+offset_bottom = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6pedr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/BG/Panel" unique_id=2101320716]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="BackButton" type="Button" parent="Settings/BG/Panel/VBoxContainer" unique_id=1225384006]
+layout_mode = 2
+theme = ExtResource("2_syfuq")
+text = "Back"
+
+[node name="Banner" type="Control" parent="Settings/BG/Panel" unique_id=1414512885]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -258.0
+offset_top = -151.0
+offset_right = 258.0
+offset_bottom = -151.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/BG/Panel/Banner" unique_id=520520447]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -3.0
+offset_right = 537.78
+offset_bottom = 124.0
+theme_override_constants/separation = 0
+
+[node name="Left" type="TextureRect" parent="Settings/BG/Panel/Banner/HBoxContainer" unique_id=1680362225]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_ma218")
+
+[node name="Middle" type="TextureRect" parent="Settings/BG/Panel/Banner/HBoxContainer" unique_id=1542494304]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_idohh")
+
+[node name="BannerLabel" type="Label" parent="Settings/BG/Panel/Banner/HBoxContainer/Middle" unique_id=861371357]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.5
+offset_top = -36.5
+offset_right = 126.5
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_idohh")
+theme_override_font_sizes/font_size = 80
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="TextureRect" parent="Settings/BG/Panel/Banner/HBoxContainer" unique_id=1584329723]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_wfhf6")
+
 [connection signal="pressed" from="BG/Panel/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="BG/Panel/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="BG/Panel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Settings/BG/Panel/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
