@@ -1,17 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2jp77kbe8cuk"]
+[gd_scene format=3 uid="uid://d2jp77kbe8cuk"]
 
-[ext_resource type="Script" uid="uid://btaq1eb3ayh6w" path="res://Scenes/slot.gd" id="1_luhj6"]
+[ext_resource type="Script" uid="uid://btaq1eb3ayh6w" path="res://Scripts/slot.gd" id="1_luhj6"]
 
-[node name="Slot" type="ColorRect"]
+[node name="Slot" type="ColorRect" unique_id=857170038]
 custom_minimum_size = Vector2(10, 10)
 color = Color(0.194349, 0.194349, 0.194349, 1)
 script = ExtResource("1_luhj6")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=823386398]
 position = Vector2(5, 5)
 scale = Vector2(0.5, 0.5)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=198283312]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0

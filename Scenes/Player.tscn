@@ -1,49 +1,45 @@
-[gd_scene load_steps=7 format=3 uid="uid://c55rk1er04nep"]
+[gd_scene format=3 uid="uid://c55rk1er04nep"]
 
 [ext_resource type="Script" uid="uid://ccgckr0woj1hp" path="res://Scripts/Player.gd" id="1_kyqiw"]
-[ext_resource type="Script" uid="uid://c5a1m13t60y50" path="res://Inventory/InventorySlot.gd" id="2_dewec"]
 [ext_resource type="Texture2D" uid="uid://oimxu3lt0g17" path="res://Assets/rougelike-characters/Spritesheet/roguelikeChar_transparent.png" id="2_gntrk"]
-[ext_resource type="Resource" uid="uid://b0xpi3qwc3fen" path="res://Inventory/Slot.tres" id="3_5ixxa"]
 [ext_resource type="PackedScene" uid="uid://d2jp77kbe8cuk" path="res://Scenes/slot.tscn" id="5_5ixxa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_idj7w"]
 radius = 8.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=981457448]
 script = ExtResource("1_kyqiw")
-slot = ExtResource("5_5ixxa")
 speed = 8000.0
-Inventory = Array[ExtResource("2_dewec")]([ExtResource("3_5ixxa"), null, null, null, ExtResource("3_5ixxa"), null, null, null, null, null, null, null])
 
-[node name="Graphics" type="Sprite2D" parent="."]
+[node name="Graphics" type="Sprite2D" parent="." unique_id=238946246]
 texture = ExtResource("2_gntrk")
 region_enabled = true
 region_rect = Rect2(17, 34, 16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=857849196]
 shape = SubResource("CircleShape2D_idj7w")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1551662902]
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 
-[node name="InventoryUI" type="Control" parent="."]
+[node name="InventoryUI" type="Control" parent="." unique_id=1888674255]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect" type="ColorRect" parent="InventoryUI"]
+[node name="ColorRect" type="ColorRect" parent="InventoryUI" unique_id=756166297]
 layout_mode = 0
-offset_left = -30.0
-offset_top = -64.0
-offset_right = 30.0
-offset_bottom = -18.0
+offset_left = -45.0
+offset_top = -89.0
+offset_right = 43.0
+offset_bottom = -21.0
 color = Color(0.129558, 0.129558, 0.129558, 1)
 
-[node name="GridContainer" type="GridContainer" parent="InventoryUI/ColorRect"]
+[node name="GridContainer" type="GridContainer" parent="InventoryUI/ColorRect" unique_id=1358443737]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,4 +50,76 @@ offset_right = -4.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 4
+columns = 6
+
+[node name="Slot" parent="InventoryUI/ColorRect/GridContainer" unique_id=857170038 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot2" parent="InventoryUI/ColorRect/GridContainer" unique_id=1273800509 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot3" parent="InventoryUI/ColorRect/GridContainer" unique_id=1660617487 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot4" parent="InventoryUI/ColorRect/GridContainer" unique_id=1870131836 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot5" parent="InventoryUI/ColorRect/GridContainer" unique_id=316836148 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot6" parent="InventoryUI/ColorRect/GridContainer" unique_id=180256578 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot7" parent="InventoryUI/ColorRect/GridContainer" unique_id=1702918158 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot8" parent="InventoryUI/ColorRect/GridContainer" unique_id=462939082 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot9" parent="InventoryUI/ColorRect/GridContainer" unique_id=856214092 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot10" parent="InventoryUI/ColorRect/GridContainer" unique_id=928025803 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot11" parent="InventoryUI/ColorRect/GridContainer" unique_id=981672260 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot12" parent="InventoryUI/ColorRect/GridContainer" unique_id=2020645673 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot13" parent="InventoryUI/ColorRect/GridContainer" unique_id=1137141043 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot14" parent="InventoryUI/ColorRect/GridContainer" unique_id=817960754 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot15" parent="InventoryUI/ColorRect/GridContainer" unique_id=1384188856 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot16" parent="InventoryUI/ColorRect/GridContainer" unique_id=1659007221 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot17" parent="InventoryUI/ColorRect/GridContainer" unique_id=952249794 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot18" parent="InventoryUI/ColorRect/GridContainer" unique_id=994090017 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot19" parent="InventoryUI/ColorRect/GridContainer" unique_id=1647834993 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot20" parent="InventoryUI/ColorRect/GridContainer" unique_id=212682367 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot21" parent="InventoryUI/ColorRect/GridContainer" unique_id=1537786000 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot22" parent="InventoryUI/ColorRect/GridContainer" unique_id=1141420302 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot23" parent="InventoryUI/ColorRect/GridContainer" unique_id=1337575926 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot24" parent="InventoryUI/ColorRect/GridContainer" unique_id=160545600 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
