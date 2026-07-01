@@ -25,7 +25,6 @@ position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 
 [node name="InventoryCanvas" type="CanvasLayer" parent="." unique_id=892570991]
-visible = false
 
 [node name="InventoryUI" type="Control" parent="InventoryCanvas" unique_id=706575442]
 layout_mode = 3
@@ -37,10 +36,16 @@ grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="InventoryCanvas/InventoryUI" unique_id=729231199]
 layout_mode = 1
-anchors_preset = 9
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_right = 578.0
-grow_vertical = 2
+offset_left = -913.0
+offset_top = -392.0
+offset_right = 913.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
@@ -64,7 +69,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="GridContainer" type="GridContainer" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer" unique_id=1360990945]
 layout_mode = 2
-columns = 8
+columns = 20
 
 [node name="Slot" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=857170038 instance=ExtResource("5_5ixxa")]
 layout_mode = 2

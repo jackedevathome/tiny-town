@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://btaq1eb3ayh6w" path="res://Scripts/slot.gd" id="1_luhj6"]
 
 [node name="Slot" type="ColorRect" unique_id=857170038]
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(80, 80)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
