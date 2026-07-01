@@ -24,102 +24,179 @@ zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 
-[node name="InventoryUI" type="Control" parent="." unique_id=1888674255]
+[node name="InventoryCanvas" type="CanvasLayer" parent="." unique_id=892570991]
 visible = false
+
+[node name="InventoryUI" type="Control" parent="InventoryCanvas" unique_id=706575442]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="InventoryUI" unique_id=756166297]
-layout_mode = 0
-offset_left = -45.0
-offset_top = -89.0
-offset_right = 43.0
-offset_bottom = -21.0
-color = Color(0.129558, 0.129558, 0.129558, 1)
+[node name="MarginContainer" type="MarginContainer" parent="InventoryCanvas/InventoryUI" unique_id=729231199]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 578.0
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
 
-[node name="GridContainer" type="GridContainer" parent="InventoryUI/ColorRect" unique_id=1358443737]
+[node name="ColorRect" type="ColorRect" parent="InventoryCanvas/InventoryUI/MarginContainer" unique_id=675437126]
+layout_mode = 2
+color = Color(0.16206557, 0.1620656, 0.16206557, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect" unique_id=1882164477]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 4.0
-offset_right = -4.0
-offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 6
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="Slot" parent="InventoryUI/ColorRect/GridContainer" unique_id=857170038 instance=ExtResource("5_5ixxa")]
+[node name="GridContainer" type="GridContainer" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer" unique_id=1360990945]
+layout_mode = 2
+columns = 8
+
+[node name="Slot" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=857170038 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot2" parent="InventoryUI/ColorRect/GridContainer" unique_id=1273800509 instance=ExtResource("5_5ixxa")]
+[node name="Slot2" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=627737434 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot3" parent="InventoryUI/ColorRect/GridContainer" unique_id=1660617487 instance=ExtResource("5_5ixxa")]
+[node name="Slot3" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1922386098 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot4" parent="InventoryUI/ColorRect/GridContainer" unique_id=1870131836 instance=ExtResource("5_5ixxa")]
+[node name="Slot4" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=597148337 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot5" parent="InventoryUI/ColorRect/GridContainer" unique_id=316836148 instance=ExtResource("5_5ixxa")]
+[node name="Slot5" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1581091652 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot6" parent="InventoryUI/ColorRect/GridContainer" unique_id=180256578 instance=ExtResource("5_5ixxa")]
+[node name="Slot6" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1087193783 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot7" parent="InventoryUI/ColorRect/GridContainer" unique_id=1702918158 instance=ExtResource("5_5ixxa")]
+[node name="Slot7" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1949777700 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot8" parent="InventoryUI/ColorRect/GridContainer" unique_id=462939082 instance=ExtResource("5_5ixxa")]
+[node name="Slot8" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1086132083 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot9" parent="InventoryUI/ColorRect/GridContainer" unique_id=856214092 instance=ExtResource("5_5ixxa")]
+[node name="Slot9" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=407451445 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot10" parent="InventoryUI/ColorRect/GridContainer" unique_id=928025803 instance=ExtResource("5_5ixxa")]
+[node name="Slot10" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=341542361 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot11" parent="InventoryUI/ColorRect/GridContainer" unique_id=981672260 instance=ExtResource("5_5ixxa")]
+[node name="Slot11" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1497460508 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot12" parent="InventoryUI/ColorRect/GridContainer" unique_id=2020645673 instance=ExtResource("5_5ixxa")]
+[node name="Slot12" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1785384598 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot13" parent="InventoryUI/ColorRect/GridContainer" unique_id=1137141043 instance=ExtResource("5_5ixxa")]
+[node name="Slot13" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=708630404 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot14" parent="InventoryUI/ColorRect/GridContainer" unique_id=817960754 instance=ExtResource("5_5ixxa")]
+[node name="Slot14" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1270563330 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot15" parent="InventoryUI/ColorRect/GridContainer" unique_id=1384188856 instance=ExtResource("5_5ixxa")]
+[node name="Slot15" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=498093765 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot16" parent="InventoryUI/ColorRect/GridContainer" unique_id=1659007221 instance=ExtResource("5_5ixxa")]
+[node name="Slot16" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1572255515 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot17" parent="InventoryUI/ColorRect/GridContainer" unique_id=952249794 instance=ExtResource("5_5ixxa")]
+[node name="Slot17" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=145570924 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot18" parent="InventoryUI/ColorRect/GridContainer" unique_id=994090017 instance=ExtResource("5_5ixxa")]
+[node name="Slot18" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1630376573 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot19" parent="InventoryUI/ColorRect/GridContainer" unique_id=1647834993 instance=ExtResource("5_5ixxa")]
+[node name="Slot19" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=202202910 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot20" parent="InventoryUI/ColorRect/GridContainer" unique_id=212682367 instance=ExtResource("5_5ixxa")]
+[node name="Slot20" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=673200007 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot21" parent="InventoryUI/ColorRect/GridContainer" unique_id=1537786000 instance=ExtResource("5_5ixxa")]
+[node name="Slot21" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1387153576 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot22" parent="InventoryUI/ColorRect/GridContainer" unique_id=1141420302 instance=ExtResource("5_5ixxa")]
+[node name="Slot22" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1022686461 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot23" parent="InventoryUI/ColorRect/GridContainer" unique_id=1337575926 instance=ExtResource("5_5ixxa")]
+[node name="Slot23" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1173672871 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
 
-[node name="Slot24" parent="InventoryUI/ColorRect/GridContainer" unique_id=160545600 instance=ExtResource("5_5ixxa")]
+[node name="Slot24" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=675082694 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot25" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1798330665 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot26" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1522505938 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot27" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1691670606 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot28" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1218566430 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot29" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1813747455 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot30" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1663440361 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot31" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=258229480 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot32" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=869239044 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot33" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1142737002 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot34" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1600139397 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot35" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=2003669261 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot36" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1268168 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot37" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1602525138 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot38" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1062041585 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot39" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=528207459 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot40" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1300647534 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot41" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=910814452 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot42" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=991363031 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot43" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=1226795357 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot44" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=919125922 instance=ExtResource("5_5ixxa")]
+layout_mode = 2
+
+[node name="Slot45" parent="InventoryCanvas/InventoryUI/MarginContainer/ColorRect/MarginContainer/GridContainer" unique_id=742743479 instance=ExtResource("5_5ixxa")]
 layout_mode = 2

@@ -5,7 +5,7 @@ extends CharacterBody2D
 func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("inventory"):
-		$InventoryUI.visible = not $InventoryUI.visible
+		$InventoryCanvas.visible = not $InventoryCanvas.visible
 	
 	var direction = Input.get_vector("left", "right", "up", "down")
 	
