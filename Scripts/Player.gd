@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var speed : float = 300
+@export var speed : float = 130
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	if Input.is_action_just_pressed("inventory"):
 		$InventoryCanvas.visible = not $InventoryCanvas.visible
@@ -12,6 +12,6 @@ func _physics_process(delta: float) -> void:
 	if direction.length() > 0:
 		direction = direction.normalized()
 	
-	velocity = direction * speed * delta
+	velocity = direction * speed
 	
 	move_and_slide()

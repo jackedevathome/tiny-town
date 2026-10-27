@@ -4,7 +4,7 @@ extends Resource
 @export var item_data: ItemData
 @export var quantity: int
 
-func _ready(p_resource: ItemData, p_quantity: int):
+func _init(p_resource: ItemData = null, p_quantity: int = 0) -> void:
 	self.item_data = p_resource
 	self.quantity = p_quantity
 
