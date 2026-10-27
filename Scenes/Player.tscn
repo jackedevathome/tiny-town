@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://b0xpi3qwc3fen" path="res://Inventory/Slot.tres" id="6_slot1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_idj7w"]
-radius = 8.0
+radius = 5.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inv"]
 content_margin_left = 8.0
@@ -33,6 +33,7 @@ region_enabled = true
 region_rect = Rect2(17, 34, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=857849196]
+position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_idj7w")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1551662902]
