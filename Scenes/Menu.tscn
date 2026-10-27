@@ -167,9 +167,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -258.0
-offset_top = -139.0
+offset_top = -190.0
 offset_right = 258.0
-offset_bottom = 139.0
+offset_bottom = 190.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_6pedr")
@@ -179,10 +179,64 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 30.0
+offset_right = -40.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 alignment = 1
+
+[node name="VolumeRow" type="HBoxContainer" parent="Settings/BG/Panel/VBoxContainer" unique_id=1736201145]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Settings/BG/Panel/VBoxContainer/VolumeRow" unique_id=418836720]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.29, 0.2, 0.13, 1)
+theme_override_fonts/font = ExtResource("5_idohh")
+theme_override_font_sizes/font_size = 40
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="Settings/BG/Panel/VBoxContainer/VolumeRow" unique_id=1290356611]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+value = 100.0
+
+[node name="FullscreenRow" type="HBoxContainer" parent="Settings/BG/Panel/VBoxContainer" unique_id=905117342]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Settings/BG/Panel/VBoxContainer/FullscreenRow" unique_id=1172038857]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.29, 0.2, 0.13, 1)
+theme_override_fonts/font = ExtResource("5_idohh")
+theme_override_font_sizes/font_size = 40
+text = "Fullscreen"
+
+[node name="FullscreenCheck" type="CheckButton" parent="Settings/BG/Panel/VBoxContainer/FullscreenRow" unique_id=2034877120]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="VsyncRow" type="HBoxContainer" parent="Settings/BG/Panel/VBoxContainer" unique_id=361955874]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Settings/BG/Panel/VBoxContainer/VsyncRow" unique_id=1528847301]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.29, 0.2, 0.13, 1)
+theme_override_fonts/font = ExtResource("5_idohh")
+theme_override_font_sizes/font_size = 40
+text = "VSync"
+
+[node name="VsyncCheck" type="CheckButton" parent="Settings/BG/Panel/VBoxContainer/VsyncRow" unique_id=776421903]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
 
 [node name="BackButton" type="Button" parent="Settings/BG/Panel/VBoxContainer" unique_id=1225384006]
 layout_mode = 2
@@ -247,3 +301,6 @@ texture = ExtResource("5_wfhf6")
 [connection signal="pressed" from="BG/Panel/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="BG/Panel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Settings/BG/Panel/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="value_changed" from="Settings/BG/Panel/VBoxContainer/VolumeRow/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="toggled" from="Settings/BG/Panel/VBoxContainer/FullscreenRow/FullscreenCheck" to="." method="_on_fullscreen_check_toggled"]
+[connection signal="toggled" from="Settings/BG/Panel/VBoxContainer/VsyncRow/VsyncCheck" to="." method="_on_vsync_check_toggled"]

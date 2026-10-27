@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ccgckr0woj1hp" path="res://Scripts/Player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://oimxu3lt0g17" path="res://Assets/rougelike-characters/Spritesheet/roguelikeChar_transparent.png" id="2_gntrk"]
 [ext_resource type="PackedScene" uid="uid://d2jp77kbe8cuk" path="res://Scenes/slot.tscn" id="5_5ixxa"]
+[ext_resource type="Resource" uid="uid://b0xpi3qwc3fen" path="res://Inventory/Slot.tres" id="6_slot1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_idj7w"]
 radius = 8.0
@@ -72,6 +73,7 @@ columns = 9
 
 [node name="Slot" parent="InventoryCanvas/InventoryUI/Panel/GridContainer" unique_id=857170038 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
+SlotData = ExtResource("6_slot1")
 
 [node name="Slot2" parent="InventoryCanvas/InventoryUI/Panel/GridContainer" unique_id=627737434 instance=ExtResource("5_5ixxa")]
 layout_mode = 2
